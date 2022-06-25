@@ -20,6 +20,7 @@ export default function () {
     function deleteUser(id){
         axios.delete(`https://62b736f8491a19c97af0a88f.mockapi.io/Crud/${id}`)
         .then(result =>{}).catch(error => console.error(error))
+        
     }
 
     

@@ -25,7 +25,7 @@ const UpdateUser=()=>{
         email,
         password
     })
-console.log("working")
+alert("Updated Successfully");
 }
 
 
