@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Update from './Update'
 import { Link } from 'react-router-dom'
 
-export default function () {
-
-
+export default function Read() {
     const [userData, setUserData] = useState([])
-    const [dataFilter, setdataFilter] = useState(null);
-    console.log(userData)
     useEffect(() => {
         axios.get('https://62b736f8491a19c97af0a88f.mockapi.io/Crud')
             .then(res => {
@@ -21,13 +16,12 @@ export default function () {
         axios.delete(`https://62b736f8491a19c97af0a88f.mockapi.io/Crud/${id}`)
         .then(result =>{}).catch(error => console.error(error))
         
+        alert("Deleted");
     }
 
     
 
     function editUser(id){
-        const filterData = userData.filter((value) => id === value.id);
-        setdataFilter(filterData[0]);
       localStorage.setItem('Id',id);
     }
 
@@ -49,7 +43,7 @@ export default function () {
                                 <td>{data.email}</td>
                                 <td>{data.password}</td>
                                 <td><Link to='/update'>{<button onClick={()=>editUser(data.id)}>Update</button>}</Link></td>
-                                <td><Link to='/delete'>{<button onClick={(e)=>deleteUser(data.id)}>Delete</button>}</Link></td>
+                                <td><button onClick={(e)=>deleteUser(data.id)}>Delete</button></td>
                             </tr>
                         )
                     })}
@@ -60,7 +54,6 @@ export default function () {
             </table>
             
             <div>
-            {/* {dataFilter !== null ? <Update data={dataFilter} clear={setdataFilter} /> : ""} */}
             </div>
 
         </div>

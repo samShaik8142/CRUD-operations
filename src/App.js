@@ -1,8 +1,7 @@
 import './App.css';
 import Create from './components/CRUD/Create'
-// import Read from './components/CRUD/Read';
 import Update from './components/CRUD/Update'
-import Delete from './components/CRUD/Delete'
+import Comments from './components/Task2/Comments';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,7 +15,7 @@ function App() {
      <Route path='/*' element={<Create />} />
      <Route path='/create' element={<Create/>} />
         <Route path='/update' element={<Update />} />
-        <Route path='/delete' element={<Delete />}/>
+        <Route path='/task2' element={<Comments />}/>
         </Routes>
    </Router>
   );

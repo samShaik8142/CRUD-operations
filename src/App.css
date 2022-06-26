@@ -43,3 +43,39 @@ td,th{
     border:1px solid black;
     padding:8px;
 }
+
+
+
+.containerT2{
+    background-color:rgb(12, 12, 84);
+    color:rgb(188, 179, 179);
+    
+  }
+  .sub-container{
+    display:flex;
+    flex-direction: row;
+    margin-bottom:10px;
+  }
+  
+  .content{
+  
+    margin-left:-50px;
+  }
+  
+  
+  .logo{
+    border-radius: 54%;
+    width:50%;
+  }
+  
+  .name{
+    display:inline;
+  }
+  h4{
+    margin-top: 11px;
+  }
+  
+  .box{
+    padding:18px;
+    border:1px solid white;
+  }
