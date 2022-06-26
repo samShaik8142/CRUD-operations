@@ -23,7 +23,7 @@ const CreateUser=()=>{
         email,
         password
     })
-console.log("working")
+alert("Successfull");
 }
 
     return (
@@ -38,7 +38,7 @@ console.log("working")
                     <input placeholder='Password' onChange={handlePassword} />
                 </div>
                 <div>
-                    <button onClick={CreateUser}>Login</button>
+                    <button onClick={CreateUser}>Create</button>
                 </div>
                 </div>
                 <Read />
